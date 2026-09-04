@@ -161,7 +161,7 @@ const AboutSection = () => {
 
           <div className="about-img-back">
             <Image
-              src="/assets/images/gallery/swimming-pool-sunset-view.jpeg"
+              src="/assets/images/gallery/home-collection.png"
               alt="Resort pool with scenic mountain view"
               fill
               sizes="(max-width: 48rem) 60vw, 35vw"
