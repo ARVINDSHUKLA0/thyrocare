@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import "./EventsSection.css";
 import { testPackages } from "@/features/data/testPackages";
 
@@ -11,143 +10,130 @@ const eventTypes = [
     title: "Healthy India Full Body Checkup 2026",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/1.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/1.png",
     price: "1950",
     mrp: "8650",
-    test: "129 Tests"
+    test: "129 Tests",
   },
   {
     id: "Executive Full Body Health Checkupp",
     title: "Executive Full Body Health Checkupp",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/2.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/2.png",
     price: "1745",
     mrp: "6050",
-    test: "127 Tests"
+    test: "127 Tests",
   },
   {
     id: "Camp Profile 1-2-3. Now 50% Off",
     title: "Camp Profile 1-2-3. Now 50% Off",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/3.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/3.webp",
     price: "1050",
     mrp: "2048",
-    test: "81 Tests"
+    test: "81 Tests",
   },
   {
     id: "New Aarogaym Basic-1 With USTSH",
     title: "New Aarogaym Basic-1 With USTSH",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/4.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/4.webp",
     price: "895",
     mrp: "1650",
-    test: "75 Tests"
+    test: "75 Tests",
   },
   {
     id: "Women Basic Profile With Hormones Test",
-    title: "Women Basic Profile With Hormones Test  ",
+    title: "Women Basic Profile With Hormones Test",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/5.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/5.webp",
     price: "1800",
     mrp: "3999",
-    test: "73 Tests"
+    test: "73 Tests",
   },
   {
     id: "Jaanch Nutra 360 with Vitamins & Testosterone",
     title: "Jaanch Nutra 360 with Vitamins & Testosterone",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/6.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/6.webp",
     price: "1850",
     mrp: "3850",
-    test: "77 Tests"
+    test: "77 Tests",
   },
   {
     id: "Wellness Basic",
     title: "Wellness Basic",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/7.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/7.webp",
     price: "1200",
     mrp: "2250",
-    test: "66 Tests"
+    test: "66 Tests",
   },
   {
     id: "Jaanch - Monsoon Fever Panel Basic (Rapid)",
     title: "Jaanch - Monsoon Fever Panel Basic (Rapid)",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/8.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/8.webp",
     price: "795",
     mrp: "1050",
-    test: "34 Tests"
+    test: "34 Tests",
   },
   {
     id: "Complete Health Checkup with Vitamins",
     title: "Complete Health Checkup with Vitamins",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/9.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/9.webp",
     price: "1750",
     mrp: "6050",
-    test: "122 Tests"
+    test: "122 Tests",
   },
   {
     id: "Senior Citizen Male Full Body Checkup - 2026",
     title: "Senior Citizen Male Full Body Checkup - 2026",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/10.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/11.png",
     price: "2300",
     mrp: "5050",
-    test: "127 Tests"
+    test: "127 Tests",
   },
   {
     id: "Aarogyam Male - 2026",
     title: "Aarogyam Male - 2026",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/11.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/12.png",
     price: "2170",
     mrp: "4550",
-    test: "103 Tests"
+    test: "103 Tests",
   },
   {
-    id: "Aarogyam Male - 2026",
+    id: "Aarogyam Male - 2026 Premium",
     title: "Aarogyam Male - 2026",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/12.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/12.png",
     price: "2600",
     mrp: "6050",
-    test: "105 Tests"
+    test: "105 Tests",
   },
   {
     id: "Senior Citizen Female Full Body Checkup - 2026",
     title: "Senior Citizen Female Full Body Checkup - 2026",
     description:
       "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
-    // image: "/assets/images/gallery/13.webp",
-    image: "/assets/images/gallery/health-checkup.png",
+    image: "/assets/images/gallery/13.png",
     price: "2600",
     mrp: "6050",
-    test: "127 Tests"
+    test: "127 Tests",
   },
 ];
 
@@ -177,7 +163,7 @@ export default function EventsSection() {
   return (
     <section id="events" className="events-section">
       <div className="events-container">
-
+        {/* HEADER */}
         <div className="events-header">
           <h2 className="events-title">
             Comprehensive Health Checkups
@@ -200,9 +186,7 @@ export default function EventsSection() {
               aria-label="Search packages"
             />
 
-            <button type="button">
-              Search
-            </button>
+            <button type="button">Search</button>
           </div>
         </div>
 
@@ -224,7 +208,7 @@ export default function EventsSection() {
                     </p>
 
                     <div className="package-price-row">
-                      <div>
+                      <div className="package-price">
                         <strong>₹ {item.price}</strong>
                         <del>₹ {item.oldPrice}</del>
                       </div>
@@ -242,7 +226,6 @@ export default function EventsSection() {
                       >
                         Book Now
                       </a>
-
                     </div>
 
                     <div className="package-divider" />
@@ -256,6 +239,7 @@ export default function EventsSection() {
             ) : (
               <div className="no-results">
                 <h3>No test package found</h3>
+
                 <p>
                   Try searching for Full Body, Male, Female, Senior or Basic.
                 </p>
@@ -267,84 +251,69 @@ export default function EventsSection() {
         {/* NORMAL HOME CARDS */}
         {!isSearching && (
           <div className="events-grid">
-            {eventTypes.map((event) => (
-              <div key={event.id} className="event-simple-card">
-
+            {eventTypes.map((event, index) => (
+              <article
+                key={`${event.id}-${index}`}
+                className="event-simple-card"
+              >
+                {/* IMAGE */}
                 <div className="event-image-wrap">
-                  <Image
+                  <img
                     src={event.image}
                     alt={event.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    style={{ objectFit: "cover" }}
+                    className="event-card-image"
                   />
-
                 </div>
 
+                {/* CONTENT */}
                 <div className="event-content-wrap">
-
-                  <h3 className="event-card-heading">
+                  <h3 style={{ paddingTop: "10px" }} className="event-card-heading">
                     {event.title}
                   </h3>
 
-                  <p className="event-card-desc">
-                    {event.description}
-                  </p>
+                  <div className="event-price-row">
+                    <div className="event-price">
+                      <span className="current-price">
+                        &#8377;{event.price}
+                      </span>
 
-                  <div className="flex items-center justify-between event-card-desc">
-                    <div className="flex items-center gap-3">
-                      <div>&#8377;{event.price}</div>
-                      <div className="text-gray-400 line-through">
+                      <span className="old-price">
                         &#8377;{event.mrp}
-                      </div>
+                      </span>
                     </div>
-                    <div>({event.test})</div>
+
+                    <span className="event-tests">
+                      ({event.test})
+                    </span>
                   </div>
 
-                  <div className="  flex items-center justify-center gap-3">
+                  {/* BUTTONS */}
+                  <div className="event-buttons">
                     <a
                       href={getWhatsappUrl(event.title)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-[42px] w-1/2 items-center justify-center rounded border border-[#c5a778] bg-white px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#a88757] transition-all duration-300 hover:border-[#205541] hover:bg-[#F06855] hover:!text-white"
+                      className="event-inquire-btn"
                     >
                       Inquire Now →
                     </a>
 
                     <button
                       type="button"
-                      className="inline-flex min-h-[42px] w-1/2 items-center justify-center rounded border border-[white] bg-[#F06855] px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-white transition hover:border-[#a88757] hover:bg-[#f067559c]"
+                      className="event-book-btn"
                     >
                       Book Now
                     </button>
                   </div>
                 </div>
-
-              </div>
+              </article>
             ))}
           </div>
         )}
-
       </div>
-    </section >
+    </section>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
