@@ -24,9 +24,9 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg,
-            rgba(4, 60, 46, .78),
-            rgba(4, 60, 46, .45),
-            rgba(4, 60, 46, .15));
+            rgba(241, 96, 85, 0.78),
+            rgba(241, 96, 85, 0.45),
+            rgba(241, 96, 85, 0.15));
 }
 
 .hc-hero-container {
@@ -91,18 +91,18 @@
 }
 
 .hc-button-light:hover {
-    color: #07533f;
-    background: #c8ae86;
+    color: #F16055;
+    background: white;
 }
 
 .hc-button-dark {
-    color: #fff;
-    background: #07533f;
-    border: 1px solid #07533f;
+    color: white;
+    background: #F16055;
+    border: 1px solid #F16055;
 }
 
 .hc-button-dark:hover {
-    color: #07533f;
+    color: #F16055;
     background: transparent;
 }
 
@@ -139,7 +139,7 @@
 .hc-intro-content h2 {
     margin: 15px 0 20px;
     font: 300 clamp(3rem, 4.5vw, 4.4rem)/1 var(--font-playfair), serif;
-    color: #1e3d2f;
+    color: #F16055;
 }
 
 .hc-intro-content p {
@@ -196,7 +196,7 @@
 }
 
 .hc-section-header h2 {
-    color: #1e3d2f;
+    color: #F16055;
 }
 
 .hc-section-header p {
@@ -248,7 +248,7 @@
 }
 
 .hc-card-content h3 {
-    color: #1e3d2f;
+    color: black;
 }
 
 .hc-card-content p,
@@ -262,8 +262,8 @@
 
 /* PROCESS */
 .hc-process {
-    padding: 85px 0;
-    background: #07533f;
+    padding: 45px 0;
+    background: #F16055;
 }
 
 .hc-process-header {
@@ -309,7 +309,7 @@
 .hc-cta-content h2 {
     margin: 12px 0 18px;
     font: 300 clamp(3rem, 6vw, 5.5rem)/.98 var(--font-playfair), serif;
-    color: #1e3d2f;
+    color: #F16055;
 }
 
 .hc-cta-content p {

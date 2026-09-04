@@ -25,12 +25,12 @@
   --letter-spacing-heading: -1.5px;
   --letter-spacing-label: 2px;
 
-  --color-primary: #004d2e;
-  --color-primary-dark: #003620;
-  --color-accent: #c5a880;
+  --color-primary: #F16055;
+  --color-primary-dark: #F16055;
+  --color-accent: block;
   --color-accent-dark: #b0936b;
   --color-accent-light: #f3edd8;
-  --color-dark: #1a271d;
+  --color-dark: black;
   --color-dark-alt: #5a6358;
   --color-light: #ffffff;
   --color-bg-warm: #faf8f5;
@@ -123,7 +123,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 77, 46, 0.5);
+  background: #f06755b7;
   border-radius: 6px;
   transition: var(--transition-base);
 }

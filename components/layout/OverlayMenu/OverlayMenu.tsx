@@ -98,11 +98,10 @@ export default function OverlayMenu({ isOpen, onClose }: { isOpen: boolean; onCl
           href="/"
           className="overlay-logo"
           onClick={onClose}
-          aria-label="Corbett Treat Resort — Go to homepage"
         >
           <Image
             src="/assets/images/logo.webp"
-            alt="Corbett Treat Resort Logo"
+            alt="imges"
             width={400}
             height={150}
             style={{ width: "auto", height: "auto" }}

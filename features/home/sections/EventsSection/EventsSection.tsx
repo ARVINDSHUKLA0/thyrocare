@@ -192,11 +192,12 @@ export default function EventsSection() {
           {/* SEARCH */}
           <div className="package-search">
             <input
+              className="input-small"
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search test packages..."
-              aria-label="Search test packages"
+              aria-label="Search packages"
             />
 
             <button type="button">
@@ -305,14 +306,14 @@ export default function EventsSection() {
                       href={getWhatsappUrl(event.title)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-[42px] w-1/2 items-center justify-center rounded border border-[#c5a778] bg-white px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#a88757] transition-all duration-300 hover:border-[#205541] hover:bg-[#205541] hover:!text-white"
+                      className="inline-flex min-h-[42px] w-1/2 items-center justify-center rounded border border-[#c5a778] bg-white px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#a88757] transition-all duration-300 hover:border-[#205541] hover:bg-[#F06855] hover:!text-white"
                     >
                       Inquire Now →
                     </a>
 
                     <button
                       type="button"
-                      className="inline-flex min-h-[42px] w-1/2 items-center justify-center rounded border border-[#205541] bg-[#205541] px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-white transition hover:border-[#a88757] hover:bg-[#a88757]"
+                      className="inline-flex min-h-[42px] w-1/2 items-center justify-center rounded border border-[white] bg-[#F06855] px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-white transition hover:border-[#a88757] hover:bg-[#f067559c]"
                     >
                       Book Now
                     </button>

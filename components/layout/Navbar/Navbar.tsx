@@ -67,7 +67,7 @@ export default function Navbar({ onMenuOpen }: NavbarProps) {
       </div>
 
 
-      <Link href="/" className="logo" aria-label="Corbett Treat Resort — Home">
+      <Link href="/" className="logo">
         <Image
           src="/assets/images/logo.webp"
           alt="Corbett Treat Resort Logo"

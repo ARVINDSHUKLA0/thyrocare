@@ -18,10 +18,10 @@
 
 .test-packages-header h1 {
     margin: 30 0 12px;
-    color: #234f3d;
+    color: black;
     font-family: var(--font-cormorant), serif;
     font-size: clamp(38px, 5vw, 64px);
-    font-weight: 500;
+    font-weight: 800;
     line-height: 1;
 
 }
@@ -154,7 +154,7 @@
     padding: 14px 20px;
     border: 0;
     border-radius: 9px;
-    background: #234f3d;
+    background: #F16055;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
@@ -164,7 +164,8 @@
 }
 
 .package-book-btn:hover {
-    background: #234f3da0;
+    background: #2E3749;
+    border: 1px solid black;
     transform: translateY(-1px);
 }
 
