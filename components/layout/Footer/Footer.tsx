@@ -30,7 +30,7 @@ export default function Footer() {
             <Link href="/" className="footer-logo">
               <Image
                 src="/assets/images/logo.webp"
-                alt="Corbett Treat Resort"
+                alt="imges-footer"
                 priority
                 loading="eager"
                 width={200}

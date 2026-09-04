@@ -1,8 +1,7 @@
-
 .footer-section {
   position: relative;
-  background-color: var(--color-primary-dark, #003620); 
-  border-top: 1px solid rgba(197, 168, 128, 0.25); 
+  background-color: black;
+  border-top: 1px solid rgba(197, 168, 128, 0.25);
   padding-top: var(--space-md);
   color: rgba(255, 255, 255, 0.8);
 }
@@ -54,7 +53,7 @@
 
 .footer-logo-img {
   max-width: 180px;
-  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
+  /* filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.15)); */
 }
 
 .footer-brand-desc {
@@ -177,6 +176,7 @@
   opacity: 0.8;
   word-wrap: break-word;
 }
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding: var(--space-md) 0;

@@ -190,15 +190,23 @@ export default function Home() {
                 className="home-blog-card"
                 key={blog.id}
               >
-                <div className="home-blog-image">
+                <div className="event-image-wrap">
                   <Image
                     src={blog.image}
-                    alt={blog.title}
-                    fill
-                    sizes="(max-width: 575px) 100vw, (max-width: 767px) 50vw, (max-width: 1199px) 33vw, 25vw"
+                    alt="Blog image"
+                    width={800}
+                    height={1000}
+                    sizes="(max-width: 767px) 100vw, 310px"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      display: "block",
+                    }}
                   />
                 </div>
 
+
+                {/* 
                 <div className="home-blog-content">
                   <span className="home-blog-subtitle">
                     {blog.subtitle}
@@ -209,7 +217,7 @@ export default function Home() {
                   <p>{blog.description}</p>
 
                   <a href="#">Read More →</a>
-                </div>
+                </div> */}
               </article>
             ))}
           </div>

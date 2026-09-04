@@ -43,7 +43,7 @@ const FloatingContact = () => {
       className={`floating-contact-container ${isScrolled ? "visible" : ""}`}
       ref={dropdownRef}
     >
-      
+
       {showCallDropdown && (
         <div className="call-dropdown-menu" role="menu">
           {CONTACT_PHONES.map((phone) => (
@@ -61,7 +61,7 @@ const FloatingContact = () => {
         </div>
       )}
 
-      
+
       <button
         onClick={() => setShowCallDropdown(!showCallDropdown)}
         className={`floating-btn floating-call-btn ${showCallDropdown ? "active" : ""}`}
@@ -74,7 +74,7 @@ const FloatingContact = () => {
         <span className="pulse-glow" aria-hidden="true" />
       </button>
 
-      
+
       <a
         href={whatsappUrl}
         target="_blank"

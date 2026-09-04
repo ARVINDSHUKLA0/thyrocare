@@ -31,20 +31,50 @@ export default function EventsSection() {
                             className="event-simple-card"
                         >
                             {/* Image */}
-                            <div className="event-image-wrap">
+                            {/* <div className="event-image-wrap">
                                 <Image
                                     src={post.image}
-                                    alt={post.title}
+                                    alt="imges blog"
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     style={{
-                                        objectFit: "cover",
+                                        objectFit: "contain",
+                                    }}
+                                />
+                            </div> */}
+
+                            {/* <div className="event-image-wrap">
+                                <Image
+                                    src={post.image}
+                                    alt="Blog image"
+                                    width={800}
+                                    height={1000}
+                                    sizes="(max-width: 767px) 100vw, 310px"
+                                    style={{
+                                        width: "100%",
+                                        height: "auto",
+                                        display: "block",
+                                    }}
+                                />
+                            </div> */}
+
+                            <div className="event-image-wrap">
+                                <Image
+                                    src={post.image}
+                                    alt="Blog image"
+                                    width={800}
+                                    height={1000}
+                                    sizes="(max-width: 767px) 100vw, 310px"
+                                    style={{
+                                        width: "100%",
+                                        height: "auto",
+                                        display: "block",
                                     }}
                                 />
                             </div>
 
                             {/* Content */}
-                            <div className="event-content-wrap">
+                            {/* <div className="event-content-wrap">
 
                                 <span className="event-subtitle">
                                     {post.subtitle}
@@ -79,7 +109,7 @@ export default function EventsSection() {
                                     </span>
                                 </div>
 
-                            </div>
+                            </div> */}
                         </div>
                     ))}
                 </div>
