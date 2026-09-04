@@ -232,15 +232,14 @@ export default function Hero() {
           </span>
 
           <h1 className="hero-title">
-            Wake Up To The Wild.
+            Wake Up To Wellness
             <br />
-            Stay Wrapped In Luxury.
+            Stay Ahead With Thyrocare.
           </h1>
 
           <p>
-            Located right next to Jim Corbett National Park,
-            experience comfortable rooms, beautiful nature,
-            exciting safaris, and warm hospitality.
+            LWith Thyrocare, experience convenient health testing, accurate diagnostics, advanced technology, and trusted healthcare services—all designed to keep you informed and one step ahead.
+
           </p>
         </div>
 
