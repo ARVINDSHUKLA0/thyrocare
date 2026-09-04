@@ -1,0 +1,9 @@
+{
+  "liveServer.settings.port": 5502,
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "editor.mouseWheelZoom": true,
+  "terminal.integrated.mouseWheelZoom": true,
+  "editor.fontSize": 20,
+  "editor.wordWrap": "on"
+}

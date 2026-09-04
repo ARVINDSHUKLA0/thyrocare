@@ -1,0 +1,350 @@
+"use client";
+
+import React, { useState } from "react";
+import Image from "next/image";
+import "./EventsSection.css";
+import { testPackages } from "@/features/data/testPackages";
+
+const eventTypes = [
+  {
+    id: "Healthy India Full Body Checkup 2026",
+    title: "Healthy India Full Body Checkup 2026",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/1.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "1950",
+    mrp: "8650",
+    test: "129 Tests"
+  },
+  {
+    id: "Executive Full Body Health Checkupp",
+    title: "Executive Full Body Health Checkupp",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/2.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "1745",
+    mrp: "6050",
+    test: "127 Tests"
+  },
+  {
+    id: "Camp Profile 1-2-3. Now 50% Off",
+    title: "Camp Profile 1-2-3. Now 50% Off",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/3.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "1050",
+    mrp: "2048",
+    test: "81 Tests"
+  },
+  {
+    id: "New Aarogaym Basic-1 With USTSH",
+    title: "New Aarogaym Basic-1 With USTSH",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/4.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "895",
+    mrp: "1650",
+    test: "75 Tests"
+  },
+  {
+    id: "Women Basic Profile With Hormones Test",
+    title: "Women Basic Profile With Hormones Test  ",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/5.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "1800",
+    mrp: "3999",
+    test: "73 Tests"
+  },
+  {
+    id: "Jaanch Nutra 360 with Vitamins & Testosterone",
+    title: "Jaanch Nutra 360 with Vitamins & Testosterone",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/6.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "1850",
+    mrp: "3850",
+    test: "77 Tests"
+  },
+  {
+    id: "Wellness Basic",
+    title: "Wellness Basic",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/7.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "1200",
+    mrp: "2250",
+    test: "66 Tests"
+  },
+  {
+    id: "Jaanch - Monsoon Fever Panel Basic (Rapid)",
+    title: "Jaanch - Monsoon Fever Panel Basic (Rapid)",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/8.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "795",
+    mrp: "1050",
+    test: "34 Tests"
+  },
+  {
+    id: "Complete Health Checkup with Vitamins",
+    title: "Complete Health Checkup with Vitamins",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/9.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "1750",
+    mrp: "6050",
+    test: "122 Tests"
+  },
+  {
+    id: "Senior Citizen Male Full Body Checkup - 2026",
+    title: "Senior Citizen Male Full Body Checkup - 2026",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/10.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "2300",
+    mrp: "5050",
+    test: "127 Tests"
+  },
+  {
+    id: "Aarogyam Male - 2026",
+    title: "Aarogyam Male - 2026",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/11.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "2170",
+    mrp: "4550",
+    test: "103 Tests"
+  },
+  {
+    id: "Aarogyam Male - 2026",
+    title: "Aarogyam Male - 2026",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/12.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "2600",
+    mrp: "6050",
+    test: "105 Tests"
+  },
+  {
+    id: "Senior Citizen Female Full Body Checkup - 2026",
+    title: "Senior Citizen Female Full Body Checkup - 2026",
+    description:
+      "CAP, NABL, ISO 9001 CAP, NABL, ISO 9001 FREE Home Sample Pickup FREE Home Sample Pickup Online Report Delivery Online Report Delivery",
+    // image: "/assets/images/gallery/13.webp",
+    image: "/assets/images/gallery/health-checkup.png",
+    price: "2600",
+    mrp: "6050",
+    test: "127 Tests"
+  },
+];
+
+export default function EventsSection() {
+  const [search, setSearch] = useState("");
+
+  const getWhatsappUrl = (eventTitle: string) => {
+    const message = `Hello BookHealthTest, I would like to inquire about booking a ${eventTitle} health checkup.`;
+
+    return `https://wa.me/9217039561?text=${encodeURIComponent(message)}`;
+  };
+
+  const filteredPackages = testPackages.filter((item) => {
+    const value = search.toLowerCase().trim();
+
+    if (!value) return false;
+
+    return (
+      item.name.toLowerCase().includes(value) ||
+      item.description.toLowerCase().includes(value) ||
+      `${item.tests}`.includes(value)
+    );
+  });
+
+  const isSearching = search.trim().length > 0;
+
+  return (
+    <section id="events" className="events-section">
+      <div className="events-container">
+
+        <div className="events-header">
+          <h2 className="events-title">
+            Comprehensive Health Checkups
+          </h2>
+
+          <p className="events-intro">
+            Take a proactive approach to your health with reliable health
+            checkups designed for every stage of life. Choose the right
+            package, book your test, and stay informed about your well-being.
+          </p>
+
+          {/* SEARCH */}
+          <div className="package-search">
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search test packages..."
+              aria-label="Search test packages"
+            />
+
+            <button type="button">
+              Search
+            </button>
+          </div>
+        </div>
+
+        {/* SEARCH RESULTS */}
+        {isSearching && (
+          <div className="package-results">
+            {filteredPackages.length > 0 ? (
+              filteredPackages.map((item) => (
+                <div className="package-card" key={item.id}>
+                  <div className="package-card-header">
+                    <h3>{item.name}</h3>
+                    <span>›</span>
+                  </div>
+
+                  <div className="package-card-body">
+                    <p className="package-tests">
+                      <strong>{item.tests} Tests:</strong>{" "}
+                      {item.description}
+                    </p>
+
+                    <div className="package-price-row">
+                      <div>
+                        <strong>₹ {item.price}</strong>
+                        <del>₹ {item.oldPrice}</del>
+                      </div>
+
+                      <span className="compare">
+                        <input type="checkbox" />
+                        Compare
+                      </span>
+
+                      <a
+                        href={getWhatsappUrl(item.name)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="package-book-btn"
+                      >
+                        Book Now
+                      </a>
+
+                    </div>
+
+                    <div className="package-divider" />
+
+                    <div className="package-fasting">
+                      ◉ &nbsp; Fasting Required: {item.fasting}
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="no-results">
+                <h3>No test package found</h3>
+                <p>
+                  Try searching for Full Body, Male, Female, Senior or Basic.
+                </p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* NORMAL HOME CARDS */}
+        {!isSearching && (
+          <div className="events-grid">
+            {eventTypes.map((event) => (
+              <div key={event.id} className="event-simple-card">
+
+                <div className="event-image-wrap">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    style={{ objectFit: "cover" }}
+                  />
+
+                </div>
+
+                <div className="event-content-wrap">
+
+                  <h3 className="event-card-heading">
+                    {event.title}
+                  </h3>
+
+                  <p className="event-card-desc">
+                    {event.description}
+                  </p>
+
+                  <div className="flex items-center justify-between event-card-desc">
+                    <div className="flex items-center gap-3">
+                      <div>&#8377;{event.price}</div>
+                      <div className="text-gray-400 line-through">
+                        &#8377;{event.mrp}
+                      </div>
+                    </div>
+                    <div>({event.test})</div>
+                  </div>
+
+                  <div className="  flex items-center justify-center gap-3">
+                    <a
+                      href={getWhatsappUrl(event.title)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-[42px] w-1/2 items-center justify-center rounded border border-[#c5a778] bg-white px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#a88757] transition-all duration-300 hover:border-[#205541] hover:bg-[#205541] hover:!text-white"
+                    >
+                      Inquire Now →
+                    </a>
+
+                    <button
+                      type="button"
+                      className="inline-flex min-h-[42px] w-1/2 items-center justify-center rounded border border-[#205541] bg-[#205541] px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-white transition hover:border-[#a88757] hover:bg-[#a88757]"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+        )}
+
+      </div>
+    </section >
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
