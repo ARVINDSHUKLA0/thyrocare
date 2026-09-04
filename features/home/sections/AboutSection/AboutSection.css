@@ -228,6 +228,8 @@
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   z-index: 2;
+  background-color: #000;
+  /* Ensure solid black color for smooth fade-to-black */
 }
 
 .about-img-front img {
