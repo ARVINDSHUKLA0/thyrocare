@@ -298,12 +298,14 @@ export default function EventsSection() {
                       Inquire Now →
                     </a>
 
-                    <button
-                      type="button"
+                    <a
+                      href={getWhatsappUrl(event.title)}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="event-book-btn"
                     >
                       Book Now
-                    </button>
+                    </a>
                   </div>
                 </div>
               </article>
